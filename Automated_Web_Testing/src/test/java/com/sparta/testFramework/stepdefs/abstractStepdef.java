@@ -18,7 +18,7 @@ public abstract class abstractStepdef {
     private static ChromeDriverService service;
     private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
 
-    private WebDriver webDriver;
+    WebDriver webDriver;
 
     public ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
