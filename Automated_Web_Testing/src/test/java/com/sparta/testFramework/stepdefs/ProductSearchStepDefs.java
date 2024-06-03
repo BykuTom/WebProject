@@ -59,29 +59,29 @@ public class ProductSearchStepDefs {
         service.stop();
     }
 
-    @Given("the customer is on the homepage")
-    public void theCustomerIsOnTheHomepage() {
-        webDriver.get("https://magento.softwaretestingboard.com/");
-    }
+//    @Given("the customer is on the homepage")
+//    public void theCustomerIsOnTheHomepage() {
+//        webDriver.get("https://magento.softwaretestingboard.com/");
+//    }
 
-    @When("the customer types {string} into the search bar")
-    public void theCustomerTypesIntoTheSearchBar(String productName) {
-        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
-        searchBox.sendKeys(productName);
-    }
+//    @When("the customer types {string} into the search bar")
+//    public void theCustomerTypesIntoTheSearchBar(String productName) {
+//        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
+//        searchBox.sendKeys(productName);
+//    }
+//
+//    @When("clicks the search button")
+//    public void clicksTheSearchButton() {
+//        WebElement searchBox = webDriver.findElement(By.id("search"));
+//        searchBox.submit();
+//    }
 
-    @When("clicks the search button")
-    public void clicksTheSearchButton() {
-        WebElement searchBox = webDriver.findElement(By.id("search"));
-        searchBox.submit();
-    }
-
-    @Then("the product {string} should be displayed in the search results")
-    public void theProductShouldBeDisplayedInTheSearchResults(String productName) {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
-        WebElement productLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(productName)));
-        assertTrue(productLink.isDisplayed());
-    }
+//    @Then("the product {string} should be displayed in the search results")
+//    public void theProductShouldBeDisplayedInTheSearchResults(String productName) {
+//        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+//        WebElement productLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(productName)));
+//        assertTrue(productLink.isDisplayed());
+//    }
 
     @Then("products containing {string} should be displayed in the search results")
     public void productsContainingShouldBeDisplayedInTheSearchResults(String partialName) {
@@ -90,13 +90,27 @@ public class ProductSearchStepDefs {
         assertTrue(productLink.isDisplayed());
     }
 
+//    @When("the customer types {string} into the search bar")
+//    public void theCustomerTypesIntoTheSearchBar(String specificItem) {
+//        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
+//        searchBox.sendKeys(specificItem);
+//        searchBox.submit();
+//    }
 
-    @Then("the customer should be redirected to the error page or receive an error message")
-    public void theCustomerShouldBeRedirectedToTheErrorPageOrReceiveAnErrorMessage() {
+    @Then("the product {string} should be displayed in the search results")
+    public void theProductShouldBeDisplayedInTheSearchResults(String productName) {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
-        WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".message.notice")));
-        assertTrue(errorMessage.isDisplayed());
+        WebElement productLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(productName)));
+        assertTrue(productLink.isDisplayed());
     }
+
+
+//    @Then("the customer should be redirected to the error page or receive an error message")
+//    public void theCustomerShouldBeRedirectedToTheErrorPageOrReceiveAnErrorMessage() {
+//        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+//        WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".message.notice")));
+//        assertTrue(errorMessage.isDisplayed());
+//    }
 
 
 }
