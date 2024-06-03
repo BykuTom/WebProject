@@ -61,15 +61,15 @@ public class ProductInfoStepdefs extends abstractStepdef{
         service.stop();
     }
 
-    @Given("the customer is on the homepage")
-    public void theCustomerIsOnTheHomepage() {
-        webDriver.get("https://magento.softwaretestingboard.com/");
-    }
+//    @Given("the customer is on the homepage")
+//    public void theCustomerIsOnTheHomepage() {
+//        webDriver.get("https://magento.softwaretestingboard.com/");
+//    }
 
     @When("the customer searches for a {string}")
     public void theCustomerSearchesForA(String specificItem) {
-        specificItem = "jacket";
-        WebElement searchBox = webDriver.findElement(By.id("search"));
+//        specificItem = "jacket";
+        WebElement searchBox = webDriver.findElement(By.cssSelector("input[name='q']"));
         searchBox.sendKeys(specificItem);
         searchBox.submit();
     }
@@ -117,7 +117,7 @@ public class ProductInfoStepdefs extends abstractStepdef{
     @When("the customer searches for an out-of-stock or non-existent item")
     public void theCustomerSearchesForAnOutOfStockOrNonExistentItem() {
         String specificItem = "football"; // Or another item you know is out-of-stock
-        WebElement searchBox = webDriver.findElement(By.id("search"));
+        WebElement searchBox = webDriver.findElement(By.cssSelector("input[name='q']"));
         searchBox.sendKeys(specificItem);
         searchBox.submit();
     }
