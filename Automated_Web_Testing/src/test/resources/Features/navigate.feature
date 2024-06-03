@@ -33,7 +33,7 @@ Feature: As a user I want to be able to navigate around magento.softwaretestingb
     When I click on an individual shop item
     Then I am taken to the individual item's page
 #
-#  Scenario: Navigating directly to an individual items
-#    Given I have a link to an individual item
-#    When I enter the link into my browser search
-#    Then I am taken to the individual item's page
+  Scenario: Navigating directly to an individual items
+    Given I have a link to an individual item
+    When I enter the link into my browser search
+    Then I am taken to that individual item's page
