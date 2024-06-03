@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 
 
 public class RegisterPage extends WebPage {
-    protected WebDriver webDriver;
     private final By firstNameBy = new By.ById("firstname");
     private final By lastNameBy = new By.ById("firstname");
     private final By emailBy = new By.ById("firstname");
