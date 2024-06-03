@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductSearchStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductSearchStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/productsearch.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/productsearch.feature" afterDir="false" />
-    </list>
+    <list default="true" id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
@@ -34,28 +33,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Cucumber Java.Feature: navigate.executor": "Run",
-    "Cucumber Java.Feature: productinfo.executor": "Run",
-    "Cucumber Java.Scenario: Customer navigates to the page of a specific item using link.executor": "Run",
-    "Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item.executor": "Run",
-    "Cucumber Java.Scenario: Customer searches for specific product type to get info.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Basket.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Create an Account page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Jackets page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Login page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Sale page.executor": "Run",
-    "Cucumber Java.Scenario: The customer types a partial name of a product into the search bar and finds multiple products.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev-product-search",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/CODING/Sparta/Project2/Automated_Web_Testing",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: navigate.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: productinfo.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer navigates to the page of a specific item using link.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Customer searches for specific product type to get info.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Navigating to Basket.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Navigating to Create an Account page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Navigating to Jackets page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Navigating to Login page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Navigating to Sale page.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: The customer types a partial name of a product into the search bar and finds multiple products.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev-product-search&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CODING/Sparta/Project2/Automated_Web_Testing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CODING\Sparta\Project2\Automated_Web_Testing\src\test\resources" />
@@ -167,10 +166,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: The customer types a partial name of a product into the search bar and finds multiple products" />
-        <item itemvalue="Cucumber Java.Feature: productinfo" />
         <item itemvalue="Cucumber Java.Scenario: Customer searches for specific product type to get info" />
         <item itemvalue="Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item" />
         <item itemvalue="Cucumber Java.Scenario: Customer navigates to the page of a specific item using link" />
+        <item itemvalue="Cucumber Java.Feature: productinfo" />
       </list>
     </recent_temporary>
   </component>

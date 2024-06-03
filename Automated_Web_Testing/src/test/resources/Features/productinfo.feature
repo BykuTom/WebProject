@@ -3,7 +3,6 @@ Feature: Product Info
   Scenario: Customer searches for specific product type to get info
     Given the customer is on the homepage
     When the customer searches for a "jacket"
-    And the customer clicks search
     Then the customer should be redirected to the product page for "jacket"
     Then the product page should display the item details, price, and add to cart button
 

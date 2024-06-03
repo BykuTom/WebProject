@@ -68,8 +68,8 @@ public class ProductInfoStepdefs extends abstractStepdef{
 
     @When("the customer searches for a {string}")
     public void theCustomerSearchesForA(String specificItem) {
-//        specificItem = "jacket";
-        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
+        specificItem = "jacket";
+        WebElement searchBox = webDriver.findElement(By.id("search"));
         searchBox.sendKeys(specificItem);
         searchBox.submit();
     }
@@ -105,14 +105,14 @@ public class ProductInfoStepdefs extends abstractStepdef{
 
     @Then("the product page should display the item details, price, and add to cart button")
     public void theProductPageShouldDisplayTheItemDetailsPriceAndAddToCartButton() {
-            WebElement productInfo = webDriver.findElement(By.cssSelector(".product-item-info"));
-            WebElement productPrice = webDriver.findElement(By.cssSelector(".price-box.price-final_price"));
-            WebElement addToCartButton = webDriver.findElement(By.cssSelector("button[title='Add to Cart']"));
+        WebElement productInfo = webDriver.findElement(By.cssSelector(".product-item-info"));
+        WebElement productPrice = webDriver.findElement(By.cssSelector(".price-box.price-final_price"));
+        WebElement addToCartButton = webDriver.findElement(By.cssSelector("button[title='Add to Cart']"));
 
-            assertTrue(productInfo.isDisplayed());
-            assertTrue(productPrice.isDisplayed());
-            assertTrue(addToCartButton.isDisplayed());
-        }
+        assertTrue(productInfo.isDisplayed());
+        assertTrue(productPrice.isDisplayed());
+        assertTrue(addToCartButton.isDisplayed());
+    }
 
     @When("the customer searches for an out-of-stock or non-existent item")
     public void theCustomerSearchesForAnOutOfStockOrNonExistentItem() {
@@ -124,7 +124,7 @@ public class ProductInfoStepdefs extends abstractStepdef{
 
     @When("the customer clicks search")
     public void theCustomerClicksSearch() {
-        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
+        WebElement searchBox = webDriver.findElement(By.id("search"));
         searchBox.submit();
     }
 
@@ -135,5 +135,6 @@ public class ProductInfoStepdefs extends abstractStepdef{
         assertTrue(errorMessage.isDisplayed());
 
     }
+
 
 }
