@@ -18,7 +18,6 @@ public abstract class abstractStepdef {
         //V issues with compatibility with actions due to headless option V
         //options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
-        options.setBinary("C:\\Program Files (x86)\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
         return options;
     }
 

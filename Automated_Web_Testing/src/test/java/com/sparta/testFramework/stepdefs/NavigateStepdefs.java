@@ -119,4 +119,5 @@ public class NavigateStepdefs extends abstractStepdef {
         MatcherAssert.assertThat(checkOutPage.getUrl(), Is.is("https://magento.softwaretestingboard.com/checkout/cart/"));
     }
 
+
 }
