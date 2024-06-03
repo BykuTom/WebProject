@@ -18,6 +18,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.io.IOException;
 
+import static com.sparta.testFramework.lib.pages.ProductPage.isOnProductPage;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
@@ -77,14 +78,17 @@ public class BasketStepDefs {
         productPage.addToCart();
     }
 
-    @Then("the cart count is incremented to {int}")
+    @Then("the cart count is set to {int}")
     public void theCartCountIsIncrementedTo(int count) {
-        assertThat(productPage.getCartCounter(), is(count));
+        int cartCount = isOnProductPage(webDriver) ? productPage.getCartCounter() : cartPage.getCartCounter();
+        assertThat(cartCount, is(count));
     }
 
     @And("the item {string} appears on the cart page")
     public void theItemAppearsOnTheCartPage(String product) {
-        cartPage = productPage.goToCartPage();
+        if (isOnProductPage(webDriver)) {
+            cartPage = productPage.goToCartPage();
+        }
         assertThat(cartPage.productIsPresent(product), is(true));
     }
 
@@ -122,7 +126,61 @@ public class BasketStepDefs {
 
     @And("the variant {string} {string} {string} appears on the cart page")
     public void theVariantAppearsOnTheCartPage(String product, String size, String colour) {
-        cartPage = productPage.goToCartPage();
+        if (isOnProductPage(webDriver)) {
+            cartPage = productPage.goToCartPage();
+        }
         assertThat(cartPage.variantIsPresent(product, size, colour), is(true));
+    }
+
+    @Given("There is a single item {string} in the cart")
+    public void thereIsASingleItemInTheCart(String productQuery) {
+        goToProductPage(productQuery);
+        productPage.addToCart();
+    }
+
+    @And("I am on the cart page")
+    public void iAmOnTheCartPage() {
+        cartPage = productPage.goToCartPage();
+    }
+
+    @When("I click the delete item button for {string}")
+    public void iClickTheDeleteItemButtonFor(String product) {
+        cartPage.deleteProduct(product);
+    }
+
+    @Then("You have no items in your shopping cart is displayed")
+    public void youHaveNoItemsInYourShoppingCartIsDisplayed() {
+        assertThat(cartPage.getEmptyCartMsg(), containsString("You have no items in your shopping cart."));
+    }
+
+    @Given("There are multiple items in the cart {string}")
+    public void thereAreMultipleItemsInTheCart(String productQueries) {
+        String[] queries = productQueries.split(", *");
+        for (String query : queries) {
+            goToProductPage(query);
+            productPage.addToCart();
+        }
+    }
+
+    @And("the item {string} is removed")
+    public void theItemIsRemoved(String product) {
+        assertThat(cartPage.productIsPresent(product), is(false));
+    }
+
+    @Given("There is an item {string} in the cart with quantity {int}")
+    public void thereIsAnItemInTheCartWithQuantity(String productQuery, int qty) {
+        goToProductPage(productQuery);
+        productPage.setQuantity(qty);
+        productPage.addToCart();
+    }
+
+    @When("the quantity value of {string} is overwritten with {int}")
+    public void theQuantityValueOfIsOverwrittenWith(String product, int qty) {
+        cartPage.setProductQty(product, qty);
+    }
+
+    @And("the Update Shopping Cart button is clicked")
+    public void theUpdateShoppingCartButtonIsClicked() {
+        cartPage.clickUpdate();
     }
 }
