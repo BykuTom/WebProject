@@ -17,7 +17,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.io.IOException;
 
-public class RegisterStepdefs {
+public class RegisterStepdefs extends abstractStepdef{
     private RegisterPage registerPage;
     private static ChromeDriverService service;
     private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
