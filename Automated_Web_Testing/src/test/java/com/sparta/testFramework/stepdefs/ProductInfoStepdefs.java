@@ -69,7 +69,6 @@ public class ProductInfoStepdefs extends abstractStepdef{
     public void theCustomerShouldBeRedirectedToTheIndividualProductPageFor(String specificItem) {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
 
-        // Checking if individual product page elements are displayed
         WebElement p_productTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1.page-title span")));
         WebElement p_productPrice = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".price-box.price-final_price")));
         WebElement p_addToCartButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[title='Add to Cart']")));
