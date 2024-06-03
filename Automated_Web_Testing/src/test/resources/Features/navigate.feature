@@ -28,10 +28,10 @@ Feature: As a user I want to be able to navigate around magento.softwaretestingb
     And I click on the 'View and Edit Cart' link
     Then I am taken to the basket page
 
-#  Scenario: Navigating to individual item from Men's short's page
-#    Given I am on the Men's short's page
-#    When I click on an individual shop item
-#    Then I am taken to the individual item's page
+  Scenario: Navigating to individual item from Men's short's page
+    Given I am on the Men's short's page
+    When I click on an individual shop item
+    Then I am taken to the individual item's page
 #
 #  Scenario: Navigating directly to an individual items
 #    Given I have a link to an individual item

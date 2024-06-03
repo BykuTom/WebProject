@@ -27,6 +27,7 @@ public class NavigateStepdefs extends abstractStepdef {
     private SalePage salePage;
     private JacketsPage jacketsPage;
     private CheckOutPage checkOutPage;
+    private ShortsPage mansShortsPage;
 
     @BeforeAll
     public static void beforeAll() throws IOException {
@@ -119,5 +120,14 @@ public class NavigateStepdefs extends abstractStepdef {
         MatcherAssert.assertThat(checkOutPage.getUrl(), Is.is("https://magento.softwaretestingboard.com/checkout/cart/"));
     }
 
+    @Given("I am on the Men's short's page")
+    public void iAmOnTheMansShortsPage(){
+        webDriver.get("https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html");
+        mansShortsPage = new ShortsPage(webDriver);
+    }
 
+    @When("I click on individual shop item")
+    public void iClickOnProduct(){
+
+    }
 }
