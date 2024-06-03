@@ -4,7 +4,7 @@ Feature: Product Info
     Given the customer is on the homepage
     When the customer types "Radiant Tee" into the search bar
     And clicks the search button
-    Then the customer should be redirected to the product page for "jacket"
+    Then the customer should be redirected to the product page for "Radiant Tee"
     Then the product page should display the item details, price, and add to cart button
 
   Scenario: Customer navigates to the page of a specific item using link

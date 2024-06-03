@@ -1,5 +1,6 @@
 package com.sparta.testFramework.stepdefs;
 
+import com.sparta.testFramework.lib.pages.HomePage;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -66,10 +67,16 @@ public class ProductInfoStepdefs extends abstractStepdef{
 //        webDriver.get("https://magento.softwaretestingboard.com/");
 //    }
 
+    @Given("Customer on the home page")
+    public void customerisOnTheHomePage(){
+        webDriver.get("https://magento.softwaretestingboard.com/");
+
+    }
+
     @When("the customer searches for a {string}")
     public void theCustomerSearchesForA(String specificItem) {
-//        specificItem = "jacket";
-        WebElement searchBox = webDriver.findElement(By.cssSelector("input[name='q']"));
+        specificItem = "Radiant Tee";
+        WebElement searchBox = webDriver.findElement(By.id("Search"));
         searchBox.sendKeys(specificItem);
         searchBox.submit();
     }
@@ -84,8 +91,12 @@ public class ProductInfoStepdefs extends abstractStepdef{
     @Then("the customer should be redirected to the product page for {string}")
     public void theCustomerShouldBeRedirectedToTheProductPageFor(String specificItem) {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
-        String expectedUrlPart = "catalogsearch/result/?q=" + specificItem;
+        String encodedItem = specificItem.replace(" ", "+"); // Encode spaces as +
+        String expectedUrlPart = "catalogsearch/result/?q=" + encodedItem;
+        System.out.println("Expected URL part: " + expectedUrlPart);
+        System.out.println("Current URL before waiting: " + webDriver.getCurrentUrl());
         wait.until(ExpectedConditions.urlContains(expectedUrlPart));
+        System.out.println("Current URL after waiting: " + webDriver.getCurrentUrl());
     }
 
     @Then("the customer should be redirected to the individual product page for {string}")
