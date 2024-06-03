@@ -59,7 +59,7 @@ public class SignInStepdefs {
 
     @Given("I am on the sign-in page")
     public void iAmOnTheSignInPage() {
-        webDriver.get("https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2NyZWF0ZS8%2C/");
+        webDriver.get("https://magento.softwaretestingboard.com/customer/account/login/referer/");
         signInPage = new SignInPage(webDriver);
     };
 
