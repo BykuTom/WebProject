@@ -22,7 +22,7 @@ import static com.sparta.testFramework.lib.pages.ProductPage.isOnProductPage;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
-public class BasketStepDefs {
+public class CartStepDefs {
     private static ChromeDriverService service;
     private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
     private static final String BASE_URL = "https://magento.softwaretestingboard.com/";
