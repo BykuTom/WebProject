@@ -40,4 +40,4 @@ build/
 
 ### ChromeDriver ###
 chromedriver.exe
-LICENSE.chromedriver
+LICENSE.chromedriver!/.idea/

@@ -37,18 +37,8 @@ public class ProductInfoStepdefs extends abstractStepdef{
         return options;
     }
 
-    public ProductInfoStepdefs() throws IOException {
-        if (service == null) {
-            try {
-                startService();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        setupWebDriver();
-    }
-
-    private void startService() throws IOException {
+    @BeforeAll
+    public static void beforeAll() throws IOException {
         service = new ChromeDriverService.Builder()
                 .usingDriverExecutable(new File(DRIVER_LOCATION))
                 .usingAnyFreePort()
@@ -56,33 +46,19 @@ public class ProductInfoStepdefs extends abstractStepdef{
         service.start();
     }
 
-    private void setupWebDriver() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--headless");
-        options.addArguments("--remote-allow-origins=*");
-        webDriver = new RemoteWebDriver(service.getUrl(), options);
-    }
-
-    protected void quitWebDriver() {
-        if (webDriver != null) {
-            webDriver.quit();
-        }
-    }
-
-    protected static void stopService() {
-        if (service != null) {
-            service.stop();
-        }
-    }
-
     @Before
-    public void setUp() {
-        // No additional setup needed; handled by AbstractStepdef
+    public void setUp(){
+        webDriver = new RemoteWebDriver(service.getUrl(), getChromeOptions());
     }
 
     @After
-    public void tearDown() {
+    public void afterEach(){
+        webDriver.quit();
+    }
+
+    @AfterAll
+    public static void afterAll(){
+        service.stop();
     }
 
     @Given("the customer is on the homepage")
