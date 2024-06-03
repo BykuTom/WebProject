@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,7 @@
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Cucumber Java.Feature: navigate.executor": "Run",
     "Cucumber Java.Feature: productinfo.executor": "Run",
+    "Cucumber Java.Scenario: .executor": "Run",
     "Cucumber Java.Scenario: Customer navigates to the page of a specific item using link.executor": "Run",
     "Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item.executor": "Run",
     "Cucumber Java.Scenario: Customer searches for specific product to see reviews.executor": "Run",
@@ -48,6 +49,8 @@
     "Cucumber Java.Scenario: Navigating to Login page.executor": "Run",
     "Cucumber Java.Scenario: Navigating to Sale page.executor": "Run",
     "Cucumber Java.Scenario: Navigating to individual item from Men's short's page.executor": "Run",
+    "Cucumber Java.Scenario: The customer filters products by selecting a single category.executor": "Run",
+    "Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category.executor": "Run",
     "Cucumber Java.Scenario: The customer types a partial product name into the search bar and finds the product.executor": "Run",
     "Cucumber Java.Scenario: The customer types a query into the search bar that does not match any product in the database.executor": "Run",
     "Cucumber Java.Scenario: The customer types the exact name of a product into the search bar and finds the product.executor": "Run",
@@ -68,46 +71,7 @@
       <recent name="com.sparta.testFramework.lib.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item">
-    <configuration name="Feature: productinfo" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: productinfo" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Customer navigates to the page of a specific item using link" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Customer navigates to the page of a specific item using link$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Customer navigates to the page of a specific item using link$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer navigates to the page of a specific item using link" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category">
     <configuration name="Scenario: Customer searches for an out-of-stock or non-existent item" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
@@ -148,15 +112,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Customer searches for specific product type to get info" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: The customer filters products by selecting a single category" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
       <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Customer searches for specific product type to get info$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Customer searches for specific product type to get info$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer searches for specific product type to get info" />
+      <option name="NAME_FILTER" value="^The customer filters products by selecting a single category$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer filters products by selecting a single category$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer filters products by selecting a single category" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: The customer filters products by selecting a subcategory within a main category" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="NAME_FILTER" value="^The customer filters products by selecting a subcategory within a main category$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer filters products by selecting a subcategory within a main category$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer filters products by selecting a subcategory within a main category" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="NAME_FILTER" value="^$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: " />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -170,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category" />
+        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a single category" />
+        <item itemvalue="Cucumber Java.Scenario: " />
         <item itemvalue="Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item" />
         <item itemvalue="Cucumber Java.Scenario: Customer searches for specific product to see reviews" />
-        <item itemvalue="Cucumber Java.Scenario: Customer navigates to the page of a specific item using link" />
-        <item itemvalue="Cucumber Java.Feature: productinfo" />
-        <item itemvalue="Cucumber Java.Scenario: Customer searches for specific product type to get info" />
       </list>
     </recent_temporary>
   </component>
