@@ -28,6 +28,9 @@ public class NavigateStepdefs extends abstractStepdef {
     private JacketsPage jacketsPage;
     private CheckOutPage checkOutPage;
     private ShortsPage mansShortsPage;
+    private ProductPage individualShorts;
+    private String individualProductLink;
+    private ProductPage individualProduct;
 
     @BeforeAll
     public static void beforeAll() throws IOException {
@@ -121,13 +124,34 @@ public class NavigateStepdefs extends abstractStepdef {
     }
 
     @Given("I am on the Men's short's page")
-    public void iAmOnTheMansShortsPage(){
+    public void iAmOnTheMansShortsPage() throws InterruptedException {
         webDriver.get("https://magento.softwaretestingboard.com/men/bottoms-men/shorts-men.html");
         mansShortsPage = new ShortsPage(webDriver);
+        mansShortsPage.waitFor(2);
     }
 
-    @When("I click on individual shop item")
+    @When("I click on an individual shop item")
     public void iClickOnProduct(){
-
+        individualShorts = mansShortsPage.getProductByName("Pierce Gym Short");
     }
+
+    @Then("I am taken to the individual item's page")
+    public void iAmOnTheIndividualShortPage(){
+        MatcherAssert.assertThat(individualShorts.getUrl(), Is.is("https://magento.softwaretestingboard.com/pierce-gym-short.html"));
+    }
+
+    @Given("I have a link to an individual item")
+    public void iHaveALinkToAnItem(){
+        individualProductLink = "https://magento.softwaretestingboard.com/rapha-sports-short.html";
+    }
+    @When("I enter the link into my browser search")
+    public void iEnterLinkIntoBrowser(){
+        webDriver.get("https://magento.softwaretestingboard.com/rapha-sports-short.html");
+        individualProduct = new ProductPage(webDriver);
+    }
+    @Then("I am taken to that individual item's page")
+    public void iAmOnIndividualItemPage(){
+        MatcherAssert.assertThat(individualProduct.getUrl(), Is.is("https://magento.softwaretestingboard.com/rapha-sports-short.html"));
+    }
+
 }
