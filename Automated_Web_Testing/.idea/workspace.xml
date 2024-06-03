@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b688e14-266a-4c08-9c52-6d3311c82103" name="Changes" comment="deleted idea dir">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductSearchStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductSearchStepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +40,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Cucumber Java.Feature: productinfo.executor": "Run",
+    "Cucumber Java.Feature: productsearch.executor": "Run",
     "Cucumber Java.Scenario: Customer navigates to the product page of a specific item.executor": "Run",
     "Cucumber Java.Scenario: Customer searches for specific product type to get info.executor": "Run",
     "Cucumber Java.Scenario: Navigating to Create an Account page.executor": "Run",
+    "Cucumber Java.Scenario: The customer types a partial name of a product into the search bar and finds multiple products.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev-product-search",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/dunca/WebProject/Automated_Web_Testing/pom.xml"
   }
 }]]></component>
-  <component name="RunManager" selected="Cucumber Java.Feature: productinfo">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Customer searches for specific product type to get info">
     <configuration name="Feature: productinfo" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
@@ -57,6 +60,25 @@
       <module name="Automated_Web_Testing" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: productinfo" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: productsearch" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productsearch.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: productsearch" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -91,7 +113,6 @@
     <configuration name="Scenario: Customer searches for specific product type to get info" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
       <option name="NAME_FILTER" value="^Customer searches for specific product type to get info$" />
@@ -108,15 +129,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Navigating to Create an Account page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: The customer types a partial name of a product into the search bar and finds multiple products" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/navigate.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productsearch.feature" />
       <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Navigating to Create an Account page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Navigating to Create an Account page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Navigating to Create an Account page" />
+      <option name="NAME_FILTER" value="^The customer types a partial name of a product into the search bar and finds multiple products$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer types a partial name of a product into the search bar and finds multiple products$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer types a partial name of a product into the search bar and finds multiple products" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -130,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Customer searches for specific product type to get info" />
+        <item itemvalue="Cucumber Java.Scenario: The customer types a partial name of a product into the search bar and finds multiple products" />
+        <item itemvalue="Cucumber Java.Feature: productsearch" />
         <item itemvalue="Cucumber Java.Scenario: Customer navigates to the product page of a specific item" />
         <item itemvalue="Cucumber Java.Feature: productinfo" />
-        <item itemvalue="Cucumber Java.Scenario: Navigating to Create an Account page" />
-        <item itemvalue="Cucumber Java.Scenario: Customer searches for specific product type to get info" />
-        <item itemvalue="Cucumber Java.Scenario: Customer navigates to the product page of a specific item" />
       </list>
     </recent_temporary>
   </component>

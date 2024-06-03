@@ -66,7 +66,7 @@ public class ProductSearchStepDefs {
 
     @When("the customer types {string} into the search bar")
     public void theCustomerTypesIntoTheSearchBar(String productName) {
-        WebElement searchBox = webDriver.findElement(By.id("search"));
+        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
         searchBox.sendKeys(productName);
     }
 

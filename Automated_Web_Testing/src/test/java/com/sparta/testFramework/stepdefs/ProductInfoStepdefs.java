@@ -69,7 +69,7 @@ public class ProductInfoStepdefs extends abstractStepdef{
     @When("the customer searches for a {string}")
     public void theCustomerSearchesForA(String specificItem) {
         specificItem = "jacket";
-        WebElement searchBox = webDriver.findElement(By.id("search"));
+        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text");
         searchBox.sendKeys(specificItem);
         searchBox.submit();
     }
@@ -124,7 +124,7 @@ public class ProductInfoStepdefs extends abstractStepdef{
 
     @When("the customer clicks search")
     public void theCustomerClicksSearch() {
-        WebElement searchBox = webDriver.findElement(By.id("search"));
+        WebElement searchBox = webDriver.findElement(By.cssSelector("input.input-text"));
         searchBox.submit();
     }
 
