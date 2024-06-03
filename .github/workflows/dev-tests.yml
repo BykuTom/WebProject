@@ -27,7 +27,8 @@ jobs:
         restore-keys: ${{ runner.os }}-maven
 
     - name: Install Dependencies and Run Tests
-      run: mvn clean test   
+      run: mvn clean test
+      working-directory: Automated_Web_Testing  
       
     #     cache: maven
         
