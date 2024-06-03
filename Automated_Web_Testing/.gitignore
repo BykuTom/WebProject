@@ -42,3 +42,5 @@ build/
 chromedriver.exe
 LICENSE.chromedriver!/.idea/
 !/.idea/
+!/.idea/
+!/.idea/
