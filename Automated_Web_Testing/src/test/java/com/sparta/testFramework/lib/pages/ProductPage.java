@@ -8,26 +8,34 @@ import java.time.Duration;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 public class ProductPage extends WebPage{
-    private final By pageTypeMeta = By.cssSelector("meta[property=\"og:type\"]");
-    private final By addToCartButton = By.id("product-addtocart-button");
-    private final By qtyInput = By.id("qty");
-    private final By sizeSwatch = By.cssSelector(".swatch-attribute.size");
-    private final By colourSwatch = By.cssSelector(".swatch-attribute.color");
+    private static final By PAGE_TYPE = By.cssSelector("meta[property=\"og:type\"]");
+    private static final By ADD_TO_CART = By.id("product-addtocart-button");
+    private static final By QUANTITY = By.id("qty");
+    private static final By SIZE_SWATCH = By.cssSelector(".swatch-attribute.size");
+    private static final By COLOUR_SWATCH = By.cssSelector(".swatch-attribute.color");
 
     private WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
 
     public ProductPage(WebDriver webDriver) {
         super(webDriver);
 
-        String pageType = webDriver.findElement(pageTypeMeta).getAttribute("content");
-        if (pageType == null || !pageType.equals("product")) {
+        if (!isOnProductPage(webDriver)) {
             throw new IllegalStateException(
                     "This is not a product page, current page is: " + webDriver.getCurrentUrl()
             );
         }
     }
 
+    public static boolean isOnProductPage(WebDriver webDriver) {
+        try {
+            return webDriver.findElement(PAGE_TYPE).getAttribute("content").equals("product");
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
     public CartPage goToCartPage() {
+        wait.until(not(attributeContains(ADD_TO_CART, "class", "disabled")));
         WebElement cartButton = webDriver.findElement(By.className("showcart"));
         cartButton.click();
         WebElement cartLink = webDriver.findElement(By.className("viewcart"));
@@ -36,12 +44,12 @@ public class ProductPage extends WebPage{
     }
 
     public void addToCart() {
-        wait.until(not(attributeContains(addToCartButton, "class", "disabled")));
-        webDriver.findElement(addToCartButton).click();
+        wait.until(not(attributeContains(ADD_TO_CART, "class", "disabled")));
+        webDriver.findElement(ADD_TO_CART).click();
     }
 
     public void setQuantity(int qty) {
-        WebElement input = webDriver.findElement(qtyInput);
+        WebElement input = webDriver.findElement(QUANTITY);
         input.sendKeys(Keys.DELETE, "" + qty);
     }
 
@@ -53,15 +61,15 @@ public class ProductPage extends WebPage{
     }
 
     public void setSize(String size) {
-        setVariantAttribute(sizeSwatch, size);
+        setVariantAttribute(SIZE_SWATCH, size);
     }
 
     public void setColour(String colour) {
-        setVariantAttribute(colourSwatch, colour);
+        setVariantAttribute(COLOUR_SWATCH, colour);
     }
 
     public int getCartCounter() {
-        wait.until(not(attributeContains(addToCartButton, "class", "disabled")));
+        wait.until(not(attributeContains(ADD_TO_CART, "class", "disabled")));
         String counterText = webDriver.findElement(By.className("counter-number")).getText();
         return Integer.parseInt(counterText);
     }
