@@ -5,6 +5,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,7 +29,7 @@ public class SignInStepdefs {
     public ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         return options;
     }
@@ -63,12 +64,22 @@ public class SignInStepdefs {
         signInPage = new SignInPage(webDriver);
     };
 
+    @And("I entered my email {string}")
+    public void signInEmail(String email) {
+        signInPage.enterEmail(email);
+    }
+
+    @And("I entered my password {string}")
+    public void signInPassword(String password) {
+        signInPage.enterPassword(password);
+    }
+
     @When("I click Sign in")
     public void iClickSignIn() {
         signInPage.clickSignIn();
     }
 
-    @Then("I should see an alert containing the error message")
+    @Then("I should see an alert containing an invalid account error message")
     public void errorMessage() {
         String errorMessage = "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.";
         String actualErrorMessage = webDriver.findElement(new By.ByXPath("//*[contains(text(), 'Please wait and try again later.')]")).getText();

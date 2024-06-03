@@ -3,8 +3,8 @@ Feature: As a registered user,
   So that I can purchase and browse items.
   Scenario Outline: Enter the correct details
     Given I am on the sign-in page
-    And I have entered an email "<email>"
-    And I have entered a password "<password>"
+    And I entered my email "<email>"
+    And I entered my password "<password>"
     When I click Sign in
     Then I should be redirected to my dashboard
     Examples:
@@ -13,10 +13,10 @@ Feature: As a registered user,
       | BigChungus@nish.com     | BigChungusAmongUs23.  |
   Scenario Outline: Enter incorrect details
   Given I am on the sign-in page
-  And I have entered an email "<email>"
-  And I have entered a password "<password>"
+  And I entered my email "<email>"
+  And I entered my password "<password>"
   When I click Sign in
-  Then I should see an alert containing the error message
+  Then I should see an alert containing an invalid account error message
     Examples:
       | email                     | password  |
       | sdiep@spartaglobal.com    | abc123    |
