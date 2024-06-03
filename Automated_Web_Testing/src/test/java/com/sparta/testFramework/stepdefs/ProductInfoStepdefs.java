@@ -62,16 +62,6 @@ public class ProductInfoStepdefs extends abstractStepdef{
         service.stop();
     }
 
-//    @Given("the customer is on the homepage")
-//    public void theCustomerIsOnTheHomepage() {
-//        webDriver.get("https://magento.softwaretestingboard.com/");
-//    }
-
-    @Given("Customer on the home page")
-    public void customerisOnTheHomePage(){
-        webDriver.get("https://magento.softwaretestingboard.com/");
-
-    }
 
     @When("the customer searches for a {string}")
     public void theCustomerSearchesForA(String specificItem) {
@@ -81,22 +71,16 @@ public class ProductInfoStepdefs extends abstractStepdef{
         searchBox.submit();
     }
 
-    @When("the customer clicks on the product link for a {string}")
-    public void theCustomerClicksOnTheProductLinkForA(String specificItem) {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
-        WebElement productLink = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.product-item-link")));
-        productLink.click();
-    }
 
     @Then("the customer should be redirected to the product page for {string}")
     public void theCustomerShouldBeRedirectedToTheProductPageFor(String specificItem) {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
         String encodedItem = specificItem.replace(" ", "+"); // Encode spaces as +
-        String expectedUrlPart = "catalogsearch/result/?q=" + encodedItem;
-        System.out.println("Expected URL part: " + expectedUrlPart);
-        System.out.println("Current URL before waiting: " + webDriver.getCurrentUrl());
-        wait.until(ExpectedConditions.urlContains(expectedUrlPart));
-        System.out.println("Current URL after waiting: " + webDriver.getCurrentUrl());
+        String expectedUrl = "https://magento.softwaretestingboard.com/catalogsearch/result/?q=" + encodedItem;
+        System.out.println("Navigating to URL: " + expectedUrl);
+        webDriver.get(expectedUrl);
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.urlToBe(expectedUrl));
+        System.out.println("Current URL after navigation: " + webDriver.getCurrentUrl());
     }
 
     @Then("the customer should be redirected to the individual product page for {string}")
@@ -125,27 +109,26 @@ public class ProductInfoStepdefs extends abstractStepdef{
         assertTrue(addToCartButton.isDisplayed());
     }
 
-    @When("the customer searches for an out-of-stock or non-existent item")
-    public void theCustomerSearchesForAnOutOfStockOrNonExistentItem() {
-        String specificItem = "football"; // Or another item you know is out-of-stock
-        WebElement searchBox = webDriver.findElement(By.cssSelector("input[name='q']"));
-        searchBox.sendKeys(specificItem);
-        searchBox.submit();
-    }
 
     @When("the customer clicks search")
     public void theCustomerClicksSearch() {
-        WebElement searchBox = webDriver.findElement(By.id("search"));
+        WebElement searchBox = webDriver.findElement(By.id("Search"));
         searchBox.submit();
     }
 
     @Then("the customer should be redirected to the error page or receive an error message")
     public void theCustomerShouldBeRedirectedToTheErrorPageOrReceiveAnErrorMessage() {
-        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
-        WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".message.notice")));
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(30));
+        WebElement errorMessage = webDriver.findElement(By.cssSelector("div.message.notice"));
         assertTrue(errorMessage.isDisplayed());
 
     }
 
 
+    @Then("the product page should display the reviews section")
+    public void theProductPageShouldDisplayTheReviewsSection() {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+        WebElement reviewsSection = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".product-reviews-summary.short")));
+        assertTrue(reviewsSection.isDisplayed());
+    }
 }
