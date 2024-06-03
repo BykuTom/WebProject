@@ -24,9 +24,56 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 public class ProductInfoStepdefs extends abstractStepdef{
+    private static ChromeDriverService service;
+    private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
+
+    WebDriver webDriver;
+
+    public ChromeOptions getChromeOptions(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        options.addArguments("--headless");
+        options.addArguments("--remote-allow-origins=*");
+        return options;
+    }
 
     public ProductInfoStepdefs() throws IOException {
-        super();
+        if (service == null) {
+            try {
+                startService();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        setupWebDriver();
+    }
+
+    private void startService() throws IOException {
+        service = new ChromeDriverService.Builder()
+                .usingDriverExecutable(new File(DRIVER_LOCATION))
+                .usingAnyFreePort()
+                .build();
+        service.start();
+    }
+
+    private void setupWebDriver() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        options.addArguments("--headless");
+        options.addArguments("--remote-allow-origins=*");
+        webDriver = new RemoteWebDriver(service.getUrl(), options);
+    }
+
+    protected void quitWebDriver() {
+        if (webDriver != null) {
+            webDriver.quit();
+        }
+    }
+
+    protected static void stopService() {
+        if (service != null) {
+            service.stop();
+        }
     }
 
     @Before
