@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 
 public class RegisterPage extends WebPage {
     protected WebDriver webDriver;
-    private By firstNameBy = new By.ById("firstname");
-    private By lastNameBy = new By.ById("firstname");
-    private By emailBy = new By.ById("firstname");
-    private By passwordBy = new By.ById("password");
-    private By passwordConfirmationBy = new By.ById("password-confirmation");
-    private By createAccount = new By.ByClassName("action submit primary");
-    private By passwordError = new By.ById("password-error");
-    private By emailError = new By.ById("email_address-error");
+    private final By firstNameBy = new By.ById("firstname");
+    private final By lastNameBy = new By.ById("firstname");
+    private final By emailBy = new By.ById("firstname");
+    private final By passwordBy = new By.ById("password");
+    private final By passwordConfirmationBy = new By.ById("password-confirmation");
+    private final By createAccount = new By.ByClassName("action submit primary");
+    private final By passwordError = new By.ById("password-error");
+    private final By emailError = new By.ById("email_address-error");
 
     public RegisterPage(WebDriver webDriver) {
         super(webDriver);
@@ -71,7 +71,7 @@ public class RegisterPage extends WebPage {
         String message = "Thank you for registering with Main Website Store.";
         String actualMessage = webDriver.findElement(new By.ByXPath("//*[contains(text(), 'Thank you for registering with Main Website Store.')]")).getText();
 
-        
+
 
         MatcherAssert.assertThat(message, Is.is(actualMessage));
     }
