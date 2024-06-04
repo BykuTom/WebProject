@@ -74,7 +74,7 @@ public class RegisterStepdefs extends abstractStepdef{
 
     @And("I have entered an email {string}")
     public void iHaveEnteredAnEmail(String string) {
-        registerPage.enterEmail(STR."\{getRandomName()}@gmail.com");
+        registerPage.enterEmail(getRandomName()+"@gmail.com");
     }
 
     @And("I have entered a password {string}")
