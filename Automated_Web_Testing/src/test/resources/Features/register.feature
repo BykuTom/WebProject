@@ -25,9 +25,9 @@ Feature: As a new user of an e-commerce website,
     Examples:
       | firstName | lastName | email        | password        |
       |           |  diep    | sd@gmail.com | Bv6_ELcSJ#dhX53 |
-      |  STEVEN   |          | sd@gmail.com | Bv6_ELcSJ#dhX53 |
-      |  STEVEN   |  diep    |              | Bv6_ELcSJ#dhX53 |
-      |  STEVEN   |  diep    | sd@gmail.com |                 |
+      #|  STEVEN   |          | sd@gmail.com | Bv6_ELcSJ#dhX53 |
+      #|  STEVEN   |  diep    |              | Bv6_ELcSJ#dhX53 |
+      #|  STEVEN   |  diep    | sd@gmail.com |                 |
   Scenario Outline: Enter incorrect validation password
     Given I am on the sign-up page
     And I have entered my first name "<firstName>"

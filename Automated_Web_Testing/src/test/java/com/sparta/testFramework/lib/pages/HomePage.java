@@ -22,9 +22,18 @@ public class HomePage extends WebPage{
     private By radiantTeeSizeL = By.id("option-label-size-143-item-169");
     private By radiantTeeColourOrange = By.id("option-label-color-93-item-56");
 
+    private By accountLink = By.cssSelector("css=.header:nth-child(2) > .customer-welcome .action");
+    private By accountLink2 = By.linkText("My Account");
+
 
     public HomePage(WebDriver webDriver){
         super(webDriver);
+    }
+
+    public MyAccountPage goToMyAccountPage(){
+        webDriver.findElement(accountLink).click();
+        webDriver.findElement(accountLink2).click();
+        return new MyAccountPage(webDriver);
     }
 
     public CreateAccountPage goToCreateAccountPage(){
