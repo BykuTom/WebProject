@@ -2,8 +2,10 @@ package com.sparta.testFramework.lib.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class CheckOutPage extends WebPage{
-    public CheckOutPage(WebDriver webDriver) {
+public class MyAccountPage extends WebPage{
+    public MyAccountPage(WebDriver webDriver) {
         super(webDriver);
     }
+
+
 }

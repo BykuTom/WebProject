@@ -35,8 +35,9 @@ public abstract class WebPage {
     public void clickBasketIcon(){
         webDriver.findElement(basketLink).click();
     }
-    public CheckOutPage goToViewAndEditCart(){
+
+    public CartPage goToViewAndEditCart() {
         actions.moveToElement(webDriver.findElement(viewCartLink)).click().perform();
-        return new CheckOutPage(webDriver);
+        return new CartPage(webDriver);
     }
 }

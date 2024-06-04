@@ -34,13 +34,21 @@ public class ProductPage extends WebPage{
         }
     }
 
-    public CartPage goToCartPage() {
+    private void openCartPopUp() {
         wait.until(not(attributeContains(ADD_TO_CART, "class", "disabled")));
-        WebElement cartButton = webDriver.findElement(By.className("showcart"));
-        cartButton.click();
-        WebElement cartLink = webDriver.findElement(By.className("viewcart"));
-        cartLink.click();
+        webDriver.findElement(By.className("showcart")).click();
+    }
+
+    public CartPage goToCartPage() {
+        openCartPopUp();
+        webDriver.findElement(By.className("viewcart")).click();
         return new CartPage(webDriver);
+    }
+
+    public CheckoutPage goToCheckoutPage() {
+        openCartPopUp();
+        webDriver.findElement(By.className("checkout")).click();
+        return new CheckoutPage(webDriver);
     }
 
     public void addToCart() {
