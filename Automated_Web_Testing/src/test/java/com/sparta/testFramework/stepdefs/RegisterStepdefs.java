@@ -16,6 +16,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 public class RegisterStepdefs extends abstractStepdef{
     private RegisterPage registerPage;
@@ -26,7 +27,7 @@ public class RegisterStepdefs extends abstractStepdef{
     public ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         return options;
     }
@@ -72,8 +73,8 @@ public class RegisterStepdefs extends abstractStepdef{
     }
 
     @And("I have entered an email {string}")
-    public void iHaveEnteredAnEmail(String email) {
-        registerPage.enterEmail(email);
+    public void iHaveEnteredAnEmail(String string) {
+        registerPage.enterEmail(STR."\{getRandomName()}@gmail.com");
     }
 
     @And("I have entered a password {string}")
@@ -106,5 +107,16 @@ public class RegisterStepdefs extends abstractStepdef{
         registerPage.checkEmailError();
     }
 
+    protected String getRandomName() {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder username = new StringBuilder();
+        Random rnd = new Random();
+        while (username.length() < 10) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * chars.length());
+            username.append(chars.charAt(index));
+        }
+        return username.toString();
+
+    }
 
 }

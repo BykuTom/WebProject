@@ -20,7 +20,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.io.IOException;
 
-public class SignInStepdefs {
+public class SignInStepdefs extends abstractStepdef{
     private SignInPage signInPage;
     private static ChromeDriverService service;
     private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
@@ -29,7 +29,7 @@ public class SignInStepdefs {
     public ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         return options;
     }
