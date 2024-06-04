@@ -69,3 +69,60 @@ code .
 - Before you're able to start working, download all dependencies using Maven.
 
 ## Test Metrics & Coverage
+
+## Test Coverage
+
+### Product Info
+
+- Customer searches for specific product type to get info
+- Customer searches for specific product to see reviews
+- Customer searches for an out-of-stock or non-existent item
+
+![Coverage-PInfo](image.png)
+
+### Product Search
+
+- The customer types the exact name of a product into the search bar and finds the product
+- The customer types a partial product name into the search bar and finds the product
+- The customer types a query into the search bar that does not match any product in the database
+
+![Product-Search](image-1.png)
+
+### Cart - Add to and Remove from
+
+- Add single item to cart
+- Add a quantity of the same item to cart
+- Add an item that is already present in the cart
+- Add two different items to the cart
+- Add an additional variant of an already present item to the cart
+- Remove the only item from the cart
+- Remove an item from a cart with multiple item
+- Reduce the quantity of an item within the cart
+
+![alt text](image-3.png)
+![alt text](image-5.png)
+
+### Checkout
+
+- Enter valid credentials for all required shipping fields
+
+![alt text](image-4.png)
+
+### Navigation
+
+- Navigating to Create an Account page
+- Navigating to Login page
+- Navigating to Sale page
+- Navigating to Jackets page
+- Navigating to Basket
+- Navigating to individual item from Men's short's page
+- Navigating directly to an individual items
+
+![Cart](image-2.png)
+
+### Order History
+
+- As a signed in user I am trying to access my order page, having never ordered any items
+- As a signed in user I am trying to access my order page, having previously placed an order
+- As an unsigned user I attempt to access my order page directly
+- As a signed in user I am attempting to access an order's detail
