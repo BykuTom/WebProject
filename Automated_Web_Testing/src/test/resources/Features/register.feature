@@ -12,7 +12,7 @@ Feature: As a new user of an e-commerce website,
     Examples:
     # Note: Details cannot be deleted to reproduce tests later
       | firstName | lastName | email                  | password        |
-      | Steven    | Diep     | sdiep@sportaglobal.oooooooooooooohhhhhhhhhhh | Bv6_ELcSJ#dhX53 |
+      | Steven    | Diep     | sdiep@sportaglobal.com | Bv6_ELcSJ#dhX53 |
 
   Scenario Outline: Enter invalid credentials, prompt for required fields is shown
     Given I am on the sign-up page
