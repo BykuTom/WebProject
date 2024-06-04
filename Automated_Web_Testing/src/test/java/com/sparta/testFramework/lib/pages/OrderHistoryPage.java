@@ -36,4 +36,6 @@ public class OrderHistoryPage extends WebPage{
         getOrderByIndex(index).findElement(By.className("view")).click();
         return new ViewOrderPage(webDriver);
     }
+
+
 }

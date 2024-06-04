@@ -14,7 +14,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.core.Is;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -25,9 +24,9 @@ import static org.hamcrest.Matchers.containsString;
 
 public class OrderHistoryStepdefs extends abstractStepdef{
 
-    private final String orderPageLink = "https://magento.softwaretestingboard.com/sales/order/history/";
-    private final String accountPageLink = "https://magento.softwaretestingboard.com/customer/account/";
-    private final String signInLink = "https://magento.softwaretestingboard.com/customer/account/login/referer/";
+    private static final String ORDER_PAGE_LINK = "https://magento.softwaretestingboard.com/sales/order/history/";
+    private static final String ACCOUNT_PAGE_LINK = "https://magento.softwaretestingboard.com/customer/account/";
+    private static final String SIGN_IN_LINK = "https://magento.softwaretestingboard.com/customer/account/login/referer/";
     private AccountDetailsPage accountPage;
     private OrderHistoryPage orderHistoryPage;
     private SignInPage signInPage;
@@ -65,14 +64,14 @@ public class OrderHistoryStepdefs extends abstractStepdef{
 
     @Given("I am a user who never ordered any items")
     public void iAmAUserWhoHasntOrderedItems(){
-        webDriver.get(signInLink);
+        webDriver.get(SIGN_IN_LINK);
         signInPage = new SignInPage(webDriver);
         accountPage = signInPage.goToSignedIn(noOrderUserEmail, noOrderUserPassword);
     }
 
     @Given("I am a user who previously ordered an item")
     public void iAmAUserWhoOrderedItems(){
-        webDriver.get(signInLink);
+        webDriver.get(SIGN_IN_LINK);
         signInPage = new SignInPage(webDriver);
         accountPage = signInPage.goToSignedIn(orderUserEmail, orderUserPassword);
     }
@@ -100,7 +99,7 @@ public class OrderHistoryStepdefs extends abstractStepdef{
 
     @When("I try to access the page directly")
     public void iAccessPageDirectly(){
-        webDriver.get(orderPageLink);
+        webDriver.get(ORDER_PAGE_LINK);
       orderHistoryPage = new OrderHistoryPage(webDriver);
     }
 

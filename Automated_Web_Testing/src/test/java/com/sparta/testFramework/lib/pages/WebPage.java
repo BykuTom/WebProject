@@ -29,7 +29,7 @@ public abstract class WebPage {
     }
 
     public void waitFor(int timeoutInSeconds) throws InterruptedException {
-        Thread.sleep(timeoutInSeconds * 1000); // Wait in milliseconds
+        Thread.sleep(timeoutInSeconds * 1000);
     }
 
     public void clickBasketIcon(){
@@ -40,8 +40,4 @@ public abstract class WebPage {
         actions.moveToElement(webDriver.findElement(viewCartLink)).click().perform();
         return new CartPage(webDriver);
     }
-//    public <T> void waitForExpectedCondition(int timeoutInSeconds, ExpectedConditions<T> expectedCondition)
-//            throws InterruptedException, TimeoutException {
-//        new WebDriverWait(webDriver, Duration.ofSeconds(timeoutInSeconds)).until(expectedCondition);
-//    }
 }
