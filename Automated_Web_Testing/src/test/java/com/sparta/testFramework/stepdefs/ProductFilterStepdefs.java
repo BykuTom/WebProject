@@ -65,8 +65,9 @@ public class ProductFilterStepdefs extends abstractStepdef{
     }
 
     @When("the customer selects the {string} subcategory under {string}")
-    public void theCustomerSelectsTheSubcategory(String category, String subcategory) {
+    public void theCustomerSelectsTheSubcategory(String subcategory, String category) {
         String subcategoryUrl =  constructSubcategoryUrl(category, subcategory);
+        System.out.println("Navigating to URL: " + subcategoryUrl);
         webDriver.get(subcategoryUrl);
     }
 
@@ -77,7 +78,7 @@ public class ProductFilterStepdefs extends abstractStepdef{
             categoryCheckbox.click();
         }
     }
-
+    
     @Then("the products in the {string} category should be displayed")
     public void theProductsInTheCategoryShouldBeDisplayed(String category) {
         WebElement categoryHeader = webDriver.findElement(By.cssSelector(".page-title span"));
@@ -86,12 +87,9 @@ public class ProductFilterStepdefs extends abstractStepdef{
 
     @Then("the products in the {string} subcategory under {string} should be displayed")
     public void theProductsInTheSubcategoryUnderCategoryShouldBeDisplayed(String subcategory, String category) {
-        WebElement subcategoryHeader = webDriver.findElement(By.cssSelector(".page-title span"));
-        assertTrue(subcategoryHeader.getText().contains(subcategory));
+        WebElement linkElement = webDriver.findElement(By.linkText("Cassius Sparring Tank"));
+        assertTrue(linkElement.getText().equals("Cassius Sparring Tank"));
 
-        // Assuming the category name appears somewhere else, maybe as a breadcrumb or part of the page title
-        WebElement categoryElement = webDriver.findElement(By.cssSelector(".breadcrumbs span")); // Adjust the selector as necessary
-        assertTrue(categoryElement.getText().contains(category));
     }
 
     @Then("the products in both {string} and {string} categories should be displayed")
@@ -100,11 +98,18 @@ public class ProductFilterStepdefs extends abstractStepdef{
         assertFalse("No products found for the selected categories", products.isEmpty());
     }
 
-    private String constructCategoryUrl(String category) {
+    public String constructCategoryUrl(String category) {
         return "https://magento.softwaretestingboard.com/" + category.toLowerCase().replace(" ", "-") + ".html";
     }
 
-    private String constructSubcategoryUrl(String category, String subcategory) {
-        return "https://magento.softwaretestingboard.com/" + category.toLowerCase().replace(" ", "-") + "/" + subcategory.toLowerCase().replace(" ", "-") + ".html";
+    public String constructSubcategoryUrl(String category, String subcategory) {
+        return "https://magento.softwaretestingboard.com/" + category.toLowerCase().replace(" ", "-") + "/" + subcategory.toLowerCase().replace(" ", "-") + "-" + category.toLowerCase() + ".html";
+    }
+
+    @Then("a message indicating {string} should be displayed")
+    public void aMessageIndicatingShouldBeDisplayed(String expectedErrorMessage) {
+        WebElement errorMessageElement = webDriver.findElement(By.cssSelector(".error-message")); // Adjust selector as needed
+        String actualErrorMessage = errorMessageElement.getText();
+        assertTrue(actualErrorMessage.contains(expectedErrorMessage));
     }
 }

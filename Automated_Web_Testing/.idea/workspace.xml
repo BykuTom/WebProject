@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +49,10 @@
     "Cucumber Java.Scenario: Navigating to Login page.executor": "Run",
     "Cucumber Java.Scenario: Navigating to Sale page.executor": "Run",
     "Cucumber Java.Scenario: Navigating to individual item from Men's short's page.executor": "Run",
+    "Cucumber Java.Scenario: The customer filters products by selecting a category that currently has no products.executor": "Run",
     "Cucumber Java.Scenario: The customer filters products by selecting a single category.executor": "Run",
     "Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category.executor": "Run",
+    "Cucumber Java.Scenario: The customer filters products by selecting multiple categories simultaneously.executor": "Run",
     "Cucumber Java.Scenario: The customer types a partial product name into the search bar and finds the product.executor": "Run",
     "Cucumber Java.Scenario: The customer types a query into the search bar that does not match any product in the database.executor": "Run",
     "Cucumber Java.Scenario: The customer types the exact name of a product into the search bar and finds the product.executor": "Run",
@@ -71,36 +73,16 @@
       <recent name="com.sparta.testFramework.lib.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category">
-    <configuration name="Scenario: Customer searches for an out-of-stock or non-existent item" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: The customer filters products by selecting a category that currently has no products">
+    <configuration name="Scenario: The customer filters products by selecting a category that currently has no products" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
       <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Customer searches for an out\-of\-stock or non\-existent item$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Customer searches for an out\-of\-stock or non\-existent item$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer searches for an out-of-stock or non-existent item" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Customer searches for specific product to see reviews" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Customer searches for specific product to see reviews$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Customer searches for specific product to see reviews$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Customer searches for specific product to see reviews" />
+      <option name="NAME_FILTER" value="^The customer filters products by selecting a category that currently has no products$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer filters products by selecting a category that currently has no products$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer filters products by selecting a category that currently has no products" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -152,6 +134,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: The customer filters products by selecting multiple categories simultaneously" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="NAME_FILTER" value="^The customer filters products by selecting multiple categories simultaneously$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer filters products by selecting multiple categories simultaneously$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer filters products by selecting multiple categories simultaneously" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: " type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
@@ -174,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a category that currently has no products" />
+        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting multiple categories simultaneously" />
         <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category" />
         <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a single category" />
         <item itemvalue="Cucumber Java.Scenario: " />
-        <item itemvalue="Cucumber Java.Scenario: Customer searches for an out-of-stock or non-existent item" />
-        <item itemvalue="Cucumber Java.Scenario: Customer searches for specific product to see reviews" />
       </list>
     </recent_temporary>
   </component>
