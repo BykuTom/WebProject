@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc40e549-98df-4c28-adfe-53ecdfbdf196" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/ViewOrderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/OrderHistoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/OrderHistoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/WebPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/WebPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/CartStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/CartStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/NavigateStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/NavigateStepdefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/OrderHistoryStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/OrderHistoryStepdefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/abstractStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/abstractStepdef.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +30,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2hPpOELB7zcVgKNRa2LSAgMT4k3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Feature: addToCart.executor": "Run",
+    "Cucumber Java.Feature: orderHistory.executor": "Run",
+    "Cucumber Java.Scenario: Add an item that is already present in the cart.executor": "Run",
     "Cucumber Java.Scenario: As a signed in user I am attempting to access an order's detail..executor": "Run",
     "Cucumber Java.Scenario: As a signed in user I am trying to access my order page, having never ordered any items..executor": "Run",
-    "git-widget-placeholder": "devOrderHistory"
+    "Cucumber Java.Scenario: Navigating to Create an Account page.executor": "Run",
+    "Cucumber Java.Scenario: The customer filters products by selecting a category that currently has no products.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "devOrderHistory",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/CODING/Sparta/Java-Core/WebTestingSelenium"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -35,15 +61,15 @@
       <recent name="D:\CODING\Sparta\Project2\Automated_Web_Testing\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: As a signed in user I am attempting to access an order's detail.">
-    <configuration name="Scenario: As a signed in user I am attempting to access an order's detail." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Navigating to Login page">
+    <configuration name="Feature: addToCart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/addToCart.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^As a signed in user I am attempting to access an order\'s detail\.$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^As a signed in user I am attempting to access an order\'s detail\.$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: As a signed in user I am attempting to access an order's detail." />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: addToCart" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -55,15 +81,74 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: As a signed in user I am trying to access my order page, having never ordered any items." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Add an item that is already present in the cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/addToCart.feature" />
       <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^As a signed in user I am trying to access my order page\, having never ordered any items\.$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^As a signed in user I am trying to access my order page\, having never ordered any items\.$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: As a signed in user I am trying to access my order page, having never ordered any items." />
+      <option name="NAME_FILTER" value="^Add an item that is already present in the cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add an item that is already present in the cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add an item that is already present in the cart" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Navigating to Create an Account page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/navigate.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="NAME_FILTER" value="^Navigating to Create an Account page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Navigating to Create an Account page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Navigating to Create an Account page" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Navigating to Login page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/navigate.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="NAME_FILTER" value="^Navigating to Login page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Navigating to Login page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Navigating to Login page" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: The customer filters products by selecting a category that currently has no products" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" />
+      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Automated_Web_Testing" />
+      <option name="NAME_FILTER" value="^The customer filters products by selecting a category that currently has no products$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The customer filters products by selecting a category that currently has no products$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The customer filters products by selecting a category that currently has no products" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -77,12 +162,23 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: As a signed in user I am attempting to access an order's detail." />
-        <item itemvalue="Cucumber Java.Scenario: As a signed in user I am trying to access my order page, having never ordered any items." />
+        <item itemvalue="Cucumber Java.Scenario: Navigating to Login page" />
+        <item itemvalue="Cucumber Java.Scenario: Navigating to Create an Account page" />
+        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a category that currently has no products" />
+        <item itemvalue="Cucumber Java.Feature: addToCart" />
+        <item itemvalue="Cucumber Java.Scenario: Add an item that is already present in the cart" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc40e549-98df-4c28-adfe-53ecdfbdf196" name="Changes" comment="" />
+      <created>1717505532605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717505532605</updated>
+    </task>
     <servers />
   </component>
 </project>

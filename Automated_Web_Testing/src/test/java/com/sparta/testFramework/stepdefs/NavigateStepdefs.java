@@ -155,7 +155,4 @@ public class NavigateStepdefs extends abstractStepdef {
         MatcherAssert.assertThat(individualProduct.getUrl(), Is.is("https://magento.softwaretestingboard.com/rapha-sports-short.html"));
     }
 
-    @Given("")
-    public void iAmOnMyAccountPage() {
-    }
 }

@@ -2,6 +2,7 @@ package com.sparta.testFramework.stepdefs;
 
 import com.sparta.testFramework.lib.pages.CartPage;
 import com.sparta.testFramework.lib.pages.ProductPage;
+import com.sparta.testFramework.lib.pages.WebPage;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -22,22 +23,12 @@ import static com.sparta.testFramework.lib.pages.ProductPage.isOnProductPage;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
-public class CartStepDefs {
+public class CartStepDefs extends abstractStepdef {
     private static ChromeDriverService service;
-    private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
+
     private static final String BASE_URL = "https://magento.softwaretestingboard.com/";
     private ProductPage productPage;
     private CartPage cartPage;
-
-    private WebDriver webDriver;
-
-    public ChromeOptions getChromeOptions(){
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--headless");
-        options.addArguments("--remote-allow-origins=*");
-        return options;
-    }
 
     @BeforeAll
     public static void beforeAll() throws IOException {
