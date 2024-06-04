@@ -1,6 +1,6 @@
 package com.sparta.testFramework.stepdefs;
 
-import com.sparta.testFramework.lib.pages.SignInPage;
+import com.sparta.testFramework.lib.pages.PasswordRecoveryPage;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -10,8 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.hamcrest.MatcherAssert;
-import org.hamcrest.core.Is;
-import org.openqa.selenium.By;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,8 +19,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.io.IOException;
 
-public class SignInStepdefs extends abstractStepdef{
-    private SignInPage signInPage;
+public class PasswordRecoveryStepdefs {
+    private PasswordRecoveryPage passwordRecoveryPage;
     private static ChromeDriverService service;
     private static final String DRIVER_LOCATION = "src/test/resources/chromedriver.exe";
     private WebDriver webDriver;
@@ -29,7 +28,7 @@ public class SignInStepdefs extends abstractStepdef{
     public ChromeOptions getChromeOptions(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         return options;
     }
@@ -58,36 +57,24 @@ public class SignInStepdefs extends abstractStepdef{
         service.stop();
     }
 
-    @Given("I am on the sign-in page")
-    public void iAmOnTheSignInPage() {
-        webDriver.get("https://magento.softwaretestingboard.com/customer/account/login/referer/");
-        signInPage = new SignInPage(webDriver);
-    };
-
-    @And("I entered my email {string}")
-    public void signInEmail(String email) {
-        signInPage.enterEmail(email);
+    @Given("I am on the forgot password page")
+    public void iAmOnTheSignUpPage() {
+        webDriver.get("https://magento.softwaretestingboard.com/customer/account/forgotpassword/");
+        passwordRecoveryPage = new PasswordRecoveryPage(webDriver);
     }
 
-    @And("I entered my password {string}")
-    public void signInPassword(String password) {
-        signInPage.enterPassword(password);
+    @And("I have entered an email to reset password {string}")
+    public void iHaveEnteredAnEmail(String email) {
+        passwordRecoveryPage.enterEmail(email);
+    }
+    @When("I click Reset My Password")
+    public void whenIClickResetMyPassword() {
+        passwordRecoveryPage.clickResetMyPassword();
     }
 
-    @When("I click Sign in")
-    public void iClickSignIn() {
-        signInPage.clickSignIn();
-    }
-
-    @Then("I should see an alert containing an invalid account error message")
-    public void errorMessage() {
-        String errorMessage = "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.";
-        String actualErrorMessage = webDriver.findElement(new By.ByXPath("//*[contains(text(), 'Please wait and try again later.')]")).getText();
-        MatcherAssert.assertThat(errorMessage, Is.is(actualErrorMessage));
-    }
-
-    @Then("I should be redirected to my dashboard")
-    public void goToDashboard() {
-        MatcherAssert.assertThat(signInPage.getUrl(), Is.is("https://magento.softwaretestingboard.com/customer/account/"));
+    @Then("I should see an alert If there is an account associated with email")
+    public void emailAlert() {
+        String redirectUrl = "https://magento.softwaretestingboard.com/customer/account/login/referer/";
+        MatcherAssert.assertThat(passwordRecoveryPage.getUrl(), Matchers.containsString(redirectUrl));
     }
 }
