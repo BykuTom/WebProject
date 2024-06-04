@@ -30,10 +30,3 @@ jobs:
       run: mvn clean test
       working-directory: Automated_Web_Testing  
       
-    - name: Upload test results (always run)
-      uses: dorny/test-reporter@v1
-      if: always() 
-      with:
-        name: Maven Tests  
-        path: 'Automated_Web_Testing/**/target/surefire-reports/*.xml'
-        reporter: junit  
