@@ -19,10 +19,6 @@ public class RegisterPage extends WebPage {
     private final By passwordError = new By.ById("password-error");
     private final By emailError = new By.ById("email_address-error");
     private final By firstNameRequired = new By.ById("firstname-error");
-//    private final By lastNameRequired = new By.ById("lastname-error");
-//    private final By emailRequired = new By.ById("email_address-error");
-//    private final By passwordRequired = new By.ById("password-error");
-//    private final By passwordConfirmRequired = new By.ById("password-confirmation-error");
 
     public RegisterPage(WebDriver webDriver) {
         super(webDriver);
