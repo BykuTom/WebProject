@@ -26,7 +26,7 @@ public class NavigateStepdefs extends abstractStepdef {
     private SignInPage signIn;
     private SalePage salePage;
     private JacketsPage jacketsPage;
-    private CheckOutPage checkOutPage;
+    private CartPage cartPage;
     private ShortsPage mansShortsPage;
     private ProductPage individualShorts;
     private String individualProductLink;
@@ -116,11 +116,11 @@ public class NavigateStepdefs extends abstractStepdef {
     }
     @And("I click on the 'View and Edit Cart' link")
     public void iClickViewAndEditCart() {
-        checkOutPage = homePage.goToViewAndEditCart();
+        cartPage = homePage.goToViewAndEditCart();
     }
     @Then("I am taken to the basket page")
     public void iAmOnTheCheckOutPage(){
-        MatcherAssert.assertThat(checkOutPage.getUrl(), Is.is("https://magento.softwaretestingboard.com/checkout/cart/"));
+        MatcherAssert.assertThat(cartPage.getUrl(), Is.is("https://magento.softwaretestingboard.com/checkout/cart/"));
     }
 
     @Given("I am on the Men's short's page")
