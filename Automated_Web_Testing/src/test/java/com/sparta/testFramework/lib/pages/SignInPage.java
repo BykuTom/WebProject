@@ -1,5 +1,6 @@
 package com.sparta.testFramework.lib.pages;
 
+import io.cucumber.java.en.Given;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,5 +26,12 @@ public class SignInPage extends WebPage{
     public void enterPassword(String password) {
         WebElement passwordBox = webDriver.findElement(passwordBy);
         passwordBox.sendKeys(password);
+    }
+
+    public AccountDetailsPage goToSignedIn(String email, String password){
+        enterEmail(email);
+        enterPassword(password);
+        clickSignIn();
+        return new AccountDetailsPage(webDriver);
     }
 }
