@@ -64,11 +64,18 @@ public class ProductFilterStepdefs extends abstractStepdef{
         webDriver.get(categoryUrl);
     }
 
-    @When("the customer selects the {string} subcategory under {string}")
-    public void theCustomerSelectsTheSubcategory(String subcategory, String category) {
-        String subcategoryUrl =  constructSubcategoryUrl(category, subcategory);
-        System.out.println("Navigating to URL: " + subcategoryUrl);
-        webDriver.get(subcategoryUrl);
+    @When("the customer selects the {string} subcategory under {string} for clothes items")
+    public void theCustomerSelectsTheSubcategoryForClothes(String subcategory, String category) {
+        String clothesSubcategoryUrl =  constructSubcategoryUrl(category, subcategory);
+        System.out.println("Navigating to URL: " + clothesSubcategoryUrl);
+        webDriver.get(clothesSubcategoryUrl);
+    }
+
+    @When("the customer selects the {string} subcategory under {string} for training items")
+    public void theCustomerSelectsTheSubcategoryForTraining(String subcategory, String category) {
+        String trainingSubcategoryUrl = constructMiscSubcategoryUrl(category, subcategory);
+        System.out.println(trainingSubcategoryUrl);
+        webDriver.get(trainingSubcategoryUrl);
     }
 
     @When("the customer selects the {string} category")
@@ -106,10 +113,15 @@ public class ProductFilterStepdefs extends abstractStepdef{
         return "https://magento.softwaretestingboard.com/" + category.toLowerCase().replace(" ", "-") + "/" + subcategory.toLowerCase().replace(" ", "-") + "-" + category.toLowerCase() + ".html";
     }
 
+    public String constructMiscSubcategoryUrl(String category, String subcategory) {
+        return "https://magento.softwaretestingboard.com/" + category.toLowerCase().replace(" ", "-") + "/" + category.toLowerCase().replace(" ", "-") + "-" + subcategory.toLowerCase() + ".html";
+    }
+
     @Then("a message indicating {string} should be displayed")
     public void aMessageIndicatingShouldBeDisplayed(String expectedErrorMessage) {
-        WebElement errorMessageElement = webDriver.findElement(By.cssSelector(".error-message")); // Adjust selector as needed
-        String actualErrorMessage = errorMessageElement.getText();
-        assertTrue(actualErrorMessage.contains(expectedErrorMessage));
+        WebElement messageElement = webDriver.findElement(By.cssSelector(".message.info.empty"));
+        String actualMessage = messageElement.getText();
+        assertTrue(actualMessage.contains(expectedErrorMessage));
+
     }
 }

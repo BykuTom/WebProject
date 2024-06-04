@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" afterDir="false" />
@@ -57,7 +58,7 @@
     "Cucumber Java.Scenario: The customer types a query into the search bar that does not match any product in the database.executor": "Run",
     "Cucumber Java.Scenario: The customer types the exact name of a product into the search bar and finds the product.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev-product-search",
+    "git-widget-placeholder": "dev-product-filtering",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/CODING/Sparta/Project2/Automated_Web_Testing",
     "project.structure.last.edited": "Modules",
@@ -177,8 +178,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a category that currently has no products" />
-        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting multiple categories simultaneously" />
         <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a subcategory within a main category" />
+        <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting multiple categories simultaneously" />
         <item itemvalue="Cucumber Java.Scenario: The customer filters products by selecting a single category" />
         <item itemvalue="Cucumber Java.Scenario: " />
       </list>
