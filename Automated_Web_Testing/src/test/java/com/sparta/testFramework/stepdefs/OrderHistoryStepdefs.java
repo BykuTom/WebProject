@@ -3,6 +3,7 @@ package com.sparta.testFramework.stepdefs;
 import com.sparta.testFramework.lib.pages.AccountDetailsPage;
 import com.sparta.testFramework.lib.pages.OrderHistoryPage;
 import com.sparta.testFramework.lib.pages.SignInPage;
+import com.sparta.testFramework.lib.pages.ViewOrderPage;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -30,6 +31,7 @@ public class OrderHistoryStepdefs extends abstractStepdef{
     private AccountDetailsPage accountPage;
     private OrderHistoryPage orderHistoryPage;
     private SignInPage signInPage;
+    private ViewOrderPage viewOrderPage;
 
     private String noOrderUserEmail = "Gigi@dee.kfc.Mcdonalds";
     private String noOrderUserPassword = "Gigi@dee.kfc.McdonaldsGigi@dee.kfc.Mcdonalds";
@@ -68,6 +70,13 @@ public class OrderHistoryStepdefs extends abstractStepdef{
         accountPage = signInPage.goToSignedIn(noOrderUserEmail, noOrderUserPassword);
     }
 
+    @Given("I am a user who previously ordered an item")
+    public void iAmAUserWhoOrderedItems(){
+        webDriver.get(signInLink);
+        signInPage = new SignInPage(webDriver);
+        accountPage = signInPage.goToSignedIn(orderUserEmail, orderUserPassword);
+    }
+
     @And("I am on My Account page")
     public void iAmOnMyAccountPage(){
         MatcherAssert.assertThat(accountPage.getUrl(), Is.is("https://magento.softwaretestingboard.com/customer/account/"));
@@ -80,8 +89,12 @@ public class OrderHistoryStepdefs extends abstractStepdef{
 
     @Then("I see a message informing me that 'You have placed no orders")
     public void iSeeAMessageEmpty() throws InterruptedException {
-        orderHistoryPage.waitFor(2);
         MatcherAssert.assertThat(orderHistoryPage.getMessageText(), Is.is("You have placed no orders."));
+    }
+
+    @Then("I see my previous orders")
+    public void iSeeMyPreviousOrders(){
+        MatcherAssert.assertThat(orderHistoryPage.getNumberOfOrders() > 1, Is.is(true));
     }
 
 
@@ -96,4 +109,12 @@ public class OrderHistoryStepdefs extends abstractStepdef{
         MatcherAssert.assertThat(orderHistoryPage.getUrl(), containsString("https://magento.softwaretestingboard.com/customer/account/login/referer/"));
     }
 
+    @When("I navigate to view first order")
+    public void iViewFirstOrder(){
+        viewOrderPage = orderHistoryPage.viewOrder(1);
+    }
+    @Then("I can see the order details and a valid order number")
+    public void iSeeOrderDetails(){
+        MatcherAssert.assertThat(viewOrderPage.validOrderNumber(), Is.is(true));
+    }
 }
