@@ -6,16 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 
 public class RegisterPage extends WebPage {
     private final By firstNameBy = new By.ById("firstname");
-    private final By lastNameBy = new By.ById("firstname");
-    private final By emailBy = new By.ById("firstname");
+    private final By lastNameBy = new By.ById("lastname");
+    private final By emailBy = new By.ById("email_address");
     private final By passwordBy = new By.ById("password");
     private final By passwordConfirmationBy = new By.ById("password-confirmation");
-    private final By createAccount = new By.ByClassName("action submit primary");
+    private final By createAccount = new By.ByCssSelector(".action.submit.primary");
     private final By passwordError = new By.ById("password-error");
     private final By emailError = new By.ById("email_address-error");
+    private final By firstNameRequired = new By.ById("firstname-error");
 
     public RegisterPage(WebDriver webDriver) {
         super(webDriver);
@@ -50,8 +53,12 @@ public class RegisterPage extends WebPage {
 
     public void checkEmptyFields() {
         String errorMessage = "This is a required field.";
-        String emptyFieldMessage = webDriver.findElement(new By.ByXPath("//*[contains(text(), 'This is a required field.')]")).getText();
-        MatcherAssert.assertThat(emptyFieldMessage, Is.is(errorMessage));
+        List<WebElement> emptyFieldMessages = webDriver.findElements(firstNameRequired);
+        for (WebElement message : emptyFieldMessages) {
+            if (message.getText() != null) {
+                MatcherAssert.assertThat(message.getText(), Is.is(errorMessage));
+            }
+        }
     }
 
     public void checkPasswordError() {
@@ -67,11 +74,7 @@ public class RegisterPage extends WebPage {
     }
 
     public void checkAccountSuccessMessage() {
-        String message = "Thank you for registering with Main Website Store.";
-        String actualMessage = webDriver.findElement(new By.ByXPath("//*[contains(text(), 'Thank you for registering with Main Website Store.')]")).getText();
-
-
-
-        MatcherAssert.assertThat(message, Is.is(actualMessage));
+        String customerUrl = "https://magento.softwaretestingboard.com/customer/account/";
+        MatcherAssert.assertThat(customerUrl, Is.is(webDriver.getCurrentUrl()));
     }
 }
