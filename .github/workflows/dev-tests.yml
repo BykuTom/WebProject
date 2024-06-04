@@ -30,7 +30,10 @@ jobs:
       run: mvn clean test
       working-directory: Automated_Web_Testing  
       
-    #     cache: maven
-        
-    # - name: Build with Maven
-    #   run: mvn -B package --file pom.xml
+    - name: Upload test results (always run)
+      uses: dorny/test-reporter@v1
+      if: always() 
+      with:
+        name: Maven Tests  
+        path: '**/target/surefire-reports/*.xml'  
+        reporter: junit  
