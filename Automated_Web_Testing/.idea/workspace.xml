@@ -4,72 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/AccountDetailsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/OrderHistoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/OrderHistoryStepdefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" afterDir="false" />
+    <list default="true" id="fc40e549-98df-4c28-adfe-53ecdfbdf196" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_16_12_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_16_12_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_06_2024_16_12__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductFilterStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductSearchStepdefs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/productfilter.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/productsearch.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/LICENSE.chromedriver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/lib/pages/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/NavigateStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/NavigateStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/ProductInfoStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/abstractStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/testFramework/stepdefs/abstractStepdef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/productinfo.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2hEbD4Dusorz81589SwS7WxZIyu" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Cucumber Java.Feature: navigate.executor": "Run",
     "Cucumber Java.Scenario: As a signed in user I am trying to access my order page, having never ordered any items..executor": "Run",
-    "Cucumber Java.Scenario: As an unsigned user I attempt to access my order page directly..executor": "Run",
-    "Cucumber Java.Scenario: Navigating directly to an individual items.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Basket.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Create an Account page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Jackets page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Login page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to Sale page.executor": "Run",
-    "Cucumber Java.Scenario: Navigating to individual item from Men's short's page.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "devOrderHistory",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/CODING/Sparta/Project2/Automated_Web_Testing",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "git-widget-placeholder": "Merging devOrderHistory"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\CODING\Sparta\Project2\Automated_Web_Testing\src\test\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sparta.testFramework.lib.pages" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: As a signed in user I am trying to access my order page, having never ordered any items.">
+  <component name="RunManager">
     <configuration name="Scenario: As a signed in user I am trying to access my order page, having never ordered any items." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Automated_Web_Testing" />
       <option name="NAME_FILTER" value="^As a signed in user I am trying to access my order page\, having never ordered any items\.$" />
@@ -86,116 +50,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: As an unsigned user I attempt to access my order page directly." type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/orderHistory.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^As an unsigned user I attempt to access my order page directly\.$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^As an unsigned user I attempt to access my order page directly\.$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: As an unsigned user I attempt to access my order page directly." />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Navigating directly to an individual items" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/navigate.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Navigating directly to an individual items$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Navigating directly to an individual items$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Navigating directly to an individual items" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Navigating to Sale page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/navigate.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Navigating to Sale page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Navigating to Sale page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Navigating to Sale page" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Navigating to individual item from Men's short's page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Features/navigate.feature" />
-      <option name="GLUE" value="com.sparta.testFramework.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Automated_Web_Testing" />
-      <option name="NAME_FILTER" value="^Navigating to individual item from Men\'s short\'s page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Navigating to individual item from Men\'s short\'s page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Navigating to individual item from Men's short's page" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Scenario: As a signed in user I am trying to access my order page, having never ordered any items." />
-        <item itemvalue="Cucumber Java.Scenario: As an unsigned user I attempt to access my order page directly." />
-        <item itemvalue="Cucumber Java.Scenario: Navigating to Sale page" />
-        <item itemvalue="Cucumber Java.Scenario: Navigating directly to an individual items" />
-        <item itemvalue="Cucumber Java.Scenario: Navigating to individual item from Men's short's page" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="b5be9cc1-2b12-4ff4-9412-4cba181d8b43" name="Changes" comment="" />
-      <created>1717162065744</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1717162065744</updated>
-    </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

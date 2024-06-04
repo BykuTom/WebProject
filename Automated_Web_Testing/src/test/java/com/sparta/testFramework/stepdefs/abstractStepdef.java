@@ -16,6 +16,7 @@ public abstract class abstractStepdef {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         //V issues with compatibility with actions due to headless option V
+//        options.addArguments("--headless");
         //options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors","--no-sandbox", "--disable-dev-shm-usage");
         options.addArguments("--remote-allow-origins=*");
         return options;
